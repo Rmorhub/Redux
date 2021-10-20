@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header.jsx';
-import { userContext } from './user-context';
+import { UserContext } from './user-context';
 
 class App extends React.Component {
   state = {
@@ -13,9 +13,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="page">
-        <userContext.Provider value={this.state.userDate}>
+        <UserContext.Provider value={this.state.userDate}>
           <Header />
-        </userContext.Provider>
+        </UserContext.Provider>
       </div>
     );
   }
