@@ -1,21 +1,24 @@
 import React from 'react';
 import Header from './Header.jsx';
-import { user, userContext } from './userData-context';
+import { userContext } from './userData-context';
 
 class App extends React.Component {
   state = {
-    userDate: user,
+    userDate: {
+      name: 'Nikola Tesla',
+      avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+    },
   };
 
   render() {
     return (
       <div className="page">
-        <Header />
+        <userContext.Provider value={this.state.userDate}>
+          <Header />
+        </userContext.Provider>
       </div>
     );
   }
 }
-
-App.contextType = userContext;
 
 export default App;
