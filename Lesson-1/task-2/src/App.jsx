@@ -3,15 +3,12 @@ import Header from './Header.jsx';
 import { userContext } from './user-context';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userDate: {
-        name: 'Nikola Tesla',
-        avatar_url: 'https://avatars3.githubusercontent.com/u10001',
-      },
-    };
-  }
+  state = {
+    userDate: {
+      name: 'Nikola Tesla',
+      avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+    },
+  };
 
   render() {
     return (
