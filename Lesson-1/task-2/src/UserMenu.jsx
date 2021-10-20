@@ -1,5 +1,5 @@
 import React from 'react';
-import { userContext } from './userData-context';
+import { userContext } from './user-context';
 
 class UserMenu extends React.Component {
   render() {
