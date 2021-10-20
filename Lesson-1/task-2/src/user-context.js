@@ -1,8 +1,10 @@
 import React from 'react';
 
 export const userDate = {
-  name: 'Nikola Tesla',
-  avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+  teslaUser: {
+    name: 'Nikola Tesla',
+    avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+  },
 };
 
 export const UserContext = React.createContext({});

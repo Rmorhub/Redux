@@ -4,7 +4,7 @@ import { userDate, UserContext } from './user-context';
 
 class App extends React.Component {
   state = {
-    userDate,
+    userDate: userDate.teslaUser,
   };
 
   render() {
