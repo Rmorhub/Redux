@@ -2,24 +2,23 @@ const ADD = 'USER/ADD';
 const DELETE = 'USER/DELETE';
 
 const initialState = {
-  userList: [],
+  usersList: [],
 };
 
-const userReducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
       return {
         ...state,
-        userList: state.userList.concat(action.user),
+        usersList: state.usersList.concat(action.user),
       };
     case DELETE:
       return {
         ...state,
-        userList: state.userList.filter(user => user.id !== action.id),
+        usersList: state.usersList.filter(user => user.id !== action.id),
       };
     default:
       return state;
   }
 };
 
-export default userReducer;
