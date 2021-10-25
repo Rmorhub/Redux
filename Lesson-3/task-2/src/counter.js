@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore} from 'redux';
 
 const INCREMENT = 'COUNTER/INCREMENT';
 const DECREMENT = 'COUNTER/DECREMENT';
@@ -22,11 +22,11 @@ export const counterReducer = (state = 0, action) => {
   }
 };
 
-const appReducer = combineReducers({
-  counter: counterReducer,
-});
+// const appReducer = combineReducers({
+//   counter: counterReducer,
+// });
 
 export const store = createStore(
-  appReducer,
+  counterReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
