@@ -4,13 +4,13 @@ import { weatherDataSelector } from './weather.selector';
 import * as weatherActions from './weather.actions';
 
 const Weather = ({ getWeatherData, weatherData }) => {
-  if (!weatherData) {
-    return null;
-  }
-
   useEffect(() => {
     getWeatherData();
   }, []);
+
+  if (!weatherData) {
+    return null;
+  }
 
   return (
     <main className="weather">
